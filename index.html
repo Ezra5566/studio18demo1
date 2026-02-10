@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STUDIO 18 | Fashion · Culture · Community</title>
+    <meta name="description" content="STUDIO 18 - Curating cultural and clothing-focused events. Where fashion meets art and community.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
+    
+    <!-- Lenis Smooth Scroll -->
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js"></script>
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Custom Cursor -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+    
+    <!-- Grain Overlay -->
+    <div class="grain-overlay"></div>
+    
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-logo">
+            <svg viewBox="0 0 200 200" class="logo-svg">
+                <path class="logo-path" d="M100 10 L100 190 M100 10 C140 30 160 60 160 100 C160 140 140 170 100 190 M100 10 C60 30 40 60 40 100 C40 140 60 170 100 190" stroke="#E31B23" stroke-width="8" fill="none" stroke-linecap="round"/>
+                <text x="100" y="145" text-anchor="middle" font-family="Syne" font-weight="800" font-size="32" fill="#E31B23">18</text>
+            </svg>
+            <span class="logo-text">STUDIO 18</span>
+        </div>
+        <div class="nav-links">
+            <a href="#collections" class="nav-link" data-text="Collections">Collections</a>
+            <a href="#events" class="nav-link" data-text="Events">Events</a>
+            <a href="#about" class="nav-link" data-text="About">About</a>
+            <a href="#contact" class="nav-link" data-text="Contact">Contact</a>
+        </div>
+        <button class="menu-toggle" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
+    
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <div class="mobile-menu-content">
+            <a href="#collections" class="mobile-link">Collections</a>
+            <a href="#events" class="mobile-link">Events</a>
+            <a href="#about" class="mobile-link">About</a>
+            <a href="#contact" class="mobile-link">Contact</a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-video-container">
+            <video class="hero-video" autoplay muted loop playsinline poster="assets/specialimg1.jpg">
+                <source src="assets/video.mp4" type="video/mp4">
+            </video>
+            <div class="hero-video-overlay"></div>
+        </div>
+        
+        <div class="hero-content">
+            <div class="hero-eyebrow">
+                <span class="line"></span>
+                <span class="text">Est. 2020</span>
+            </div>
+            <h1 class="hero-title">
+                <span class="title-line"><span class="char">S</span><span class="char">T</span><span class="char">U</span><span class="char">D</span><span class="char">I</span><span class="char">O</span></span>
+                <span class="title-line number"><span class="char">1</span><span class="char">8</span></span>
+            </h1>
+            <p class="hero-subtitle">Fashion · Culture · Community</p>
+            <div class="hero-cta">
+                <a href="#collections" class="btn-primary">
+                    <span>Explore</span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M7 17L17 7M17 7H7M17 7V17"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+        
+        <div class="hero-scroll-indicator">
+            <span class="scroll-text">Scroll</span>
+            <div class="scroll-line"></div>
+        </div>
+        
+        <div class="hero-locations">
+            <span>Nairobi</span>
+            <span class="divider">·</span>
+            <span>Kigali</span>
+            <span class="divider">·</span>
+            <span>Global</span>
+        </div>
+    </section>
+
+    <!-- Marquee Section -->
+    <section class="marquee-section">
+        <div class="marquee">
+            <div class="marquee-content">
+                <span>CURATING EAST AFRICAN CULTURE THROUGH STREETWEAR</span>
+                <span class="marquee-dot">●</span>
+                <span>FASHION · EVENTS · COMMUNITY</span>
+                <span class="marquee-dot">●</span>
+                <span>CURATING EAST AFRICAN CULTURE THROUGH STREETWEAR</span>
+                <span class="marquee-dot">●</span>
+                <span>FASHION · EVENTS · COMMUNITY</span>
+                <span class="marquee-dot">●</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="about-container">
+            <div class="about-visual">
+                <div class="about-image-wrapper">
+                    <img src="assets/landscape1.jpg" alt="STUDIO 18 Container Store" class="about-image">
+                    <div class="about-image-frame"></div>
+                </div>
+                <div class="about-floating-text">
+                    <span>Since</span>
+                    <span class="year">2020</span>
+                </div>
+            </div>
+            <div class="about-content">
+                <div class="section-label">About</div>
+                <h2 class="about-title">Where Fashion<br>Meets <span class="highlight">Culture</span></h2>
+                <div class="about-text">
+                    <p>STUDIO 18 is more than a fashion brand—it's a cultural movement. Born from the vibrant streets of Nairobi and Kigali, we curate experiences that bridge the gap between contemporary streetwear and authentic African expression.</p>
+                    <p>Through our pop-up events, collaborative collections, and immersive experiences, we're building a global community that celebrates creativity, individuality, and the power of cultural exchange.</p>
+                </div>
+                <div class="about-stats">
+                    <div class="stat">
+                        <span class="stat-number" data-count="50">0</span>
+                        <span class="stat-label">Events Curated</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number" data-count="25">0</span>
+                        <span class="stat-label">Brand Partners</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number" data-count="10">0</span>
+                        <span class="stat-label">K+ Community</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Collections Section -->
+    <section class="collections" id="collections">
+        <div class="collections-header">
+            <div class="section-label">Collections</div>
+            <h2 class="collections-title">Latest <span class="highlight">Drops</span></h2>
+        </div>
+        
+        <div class="collections-grid">
+            <div class="collection-card featured" data-speed="1.2">
+                <div class="collection-image">
+                    <img src="assets/photo3.jpg" alt="Jameson Collaboration">
+                    <div class="collection-overlay"></div>
+                </div>
+                <div class="collection-info">
+                    <span class="collection-tag">Collaboration</span>
+                    <h3 class="collection-name">Jameson x Studio 18</h3>
+                    <p class="collection-desc">Limited edition streetwear celebrating East African football culture</p>
+                    <a href="#" class="collection-link">View Collection</a>
+                </div>
+            </div>
+            
+            <div class="collection-card" data-speed="0.8">
+                <div class="collection-image">
+                    <img src="assets/potrait8.jpg" alt="Urban Series">
+                    <div class="collection-overlay"></div>
+                </div>
+                <div class="collection-info">
+                    <span class="collection-tag">New Season</span>
+                    <h3 class="collection-name">Urban Essentials</h3>
+                    <p class="collection-desc">Contemporary silhouettes with African influences</p>
+                    <a href="#" class="collection-link">View Collection</a>
+                </div>
+            </div>
+            
+            <div class="collection-card" data-speed="1.0">
+                <div class="collection-image">
+                    <img src="assets/potrait1.jpg" alt="Statement Pieces">
+                    <div class="collection-overlay"></div>
+                </div>
+                <div class="collection-info">
+                    <span class="collection-tag">Exclusive</span>
+                    <h3 class="collection-name">Statement Edit</h3>
+                    <p class="collection-desc">Bold pieces for those who dare to stand out</p>
+                    <a href="#" class="collection-link">View Collection</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Events Section -->
+    <section class="events" id="events">
+        <div class="events-bg">
+            <img src="assets/specialimg1.jpg" alt="Event atmosphere">
+            <div class="events-bg-overlay"></div>
+        </div>
+        
+        <div class="events-content">
+            <div class="section-label light">Events</div>
+            <h2 class="events-title">Upcoming <span class="highlight">Experiences</span></h2>
+            
+            <div class="events-list">
+                <div class="event-item">
+                    <div class="event-date">
+                        <span class="month">FEB</span>
+                        <span class="day">21</span>
+                    </div>
+                    <div class="event-info">
+                        <h3 class="event-name">Karibu Nairobi Pop-Up</h3>
+                        <p class="event-location">Nairobi, Kenya</p>
+                        <p class="event-desc">A curated fashion experience featuring 10+ East African brands, live DJ sets, and exclusive drops.</p>
+                    </div>
+                    <div class="event-action">
+                        <a href="#" class="btn-outline">Get Tickets</a>
+                    </div>
+                </div>
+                
+                <div class="event-item">
+                    <div class="event-date">
+                        <span class="month">MAR</span>
+                        <span class="day">15</span>
+                    </div>
+                    <div class="event-info">
+                        <h3 class="event-name">Studio Sessions: Volume 4</h3>
+                        <p class="event-location">Kigali, Rwanda</p>
+                        <p class="event-desc">Intimate live performances meet fashion showcases in our signature warehouse setting.</p>
+                    </div>
+                    <div class="event-action">
+                        <a href="#" class="btn-outline">RSVP</a>
+                    </div>
+                </div>
+                
+                <div class="event-item">
+                    <div class="event-date">
+                        <span class="month">APR</span>
+                        <span class="day">12</span>
+                    </div>
+                    <div class="event-info">
+                        <h3 class="event-name">Container Collective</h3>
+                        <p class="event-location">Nairobi, Kenya</p>
+                        <p class="event-desc">The ultimate streetwear marketplace. Shop, connect, and experience the culture.</p>
+                    </div>
+                    <div class="event-action">
+                        <a href="#" class="btn-outline">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery" id="gallery">
+        <div class="gallery-header">
+            <div class="section-label">Gallery</div>
+            <h2 class="gallery-title">Moments in <span class="highlight">Motion</span></h2>
+        </div>
+        
+        <div class="gallery-grid">
+            <div class="gallery-item large">
+                <img src="assets/potrait3.jpg" alt="Fashion moment">
+                <div class="gallery-caption">
+                    <span>Nairobi Pop-Up 2024</span>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="assets/potrait2.jpg" alt="Event vibe">
+            </div>
+            <div class="gallery-item">
+                <img src="assets/potrait4.jpg" alt="Street style">
+            </div>
+            <div class="gallery-item">
+                <img src="assets/potrait5.jpg" alt="Night event">
+            </div>
+            <div class="gallery-item wide">
+                <img src="assets/potrait6.jpg" alt="Live printing">
+                <div class="gallery-caption">
+                    <span>Live Screen Printing</span>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="assets/potrait7.jpg" alt="DJ set">
+            </div>
+            <div class="gallery-item">
+                <img src="assets/photo2.jpg" alt="Party scene">
+            </div>
+        </div>
+    </section>
+
+    <!-- Partners Section -->
+    <section class="partners">
+        <div class="partners-header">
+            <span class="section-label">Partners</span>
+            <p class="partners-text">Collaborating with brands that share our vision</p>
+        </div>
+        <div class="partners-grid">
+            <div class="partner-logo">
+                <img src="a.jpg" alt="MUZE">
+            </div>
+            <div class="partner-name">Jameson</div>
+            <div class="partner-name">Daily Pessa</div>
+            <div class="partner-name">Lanesteppers</div>
+            <div class="partner-name">Hekima</div>
+            <div class="partner-name">Solo Nairobi</div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter" id="contact">
+        <div class="newsletter-content">
+            <h2 class="newsletter-title">Join the <span class="highlight">Movement</span></h2>
+            <p class="newsletter-text">Be the first to know about exclusive drops, upcoming events, and behind-the-scenes content.</p>
+            
+            <form class="newsletter-form">
+                <div class="form-group">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit" class="btn-submit">
+                        <span>Subscribe</span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </button>
+                </div>
+            </form>
+            
+            <div class="social-links">
+                <a href="#" class="social-link" aria-label="Instagram">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="2" y="2" width="20" height="20" rx="5"/>
+                        <circle cx="12" cy="12" r="4"/>
+                        <circle cx="18" cy="6" r="1.5" fill="currentColor"/>
+                    </svg>
+                </a>
+                <a href="#" class="social-link" aria-label="Twitter">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                    </svg>
+                </a>
+                <a href="#" class="social-link" aria-label="TikTok">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <svg viewBox="0 0 200 200" class="footer-logo">
+                    <path d="M100 10 L100 190 M100 10 C140 30 160 60 160 100 C160 140 140 170 100 190 M100 10 C60 30 40 60 40 100 C40 140 60 170 100 190" stroke="#E31B23" stroke-width="8" fill="none" stroke-linecap="round"/>
+                    <text x="100" y="145" text-anchor="middle" font-family="Syne" font-weight="800" font-size="32" fill="#E31B23">18</text>
+                </svg>
+                <p class="footer-tagline">Curating East African culture through streetwear</p>
+            </div>
+            
+            <div class="footer-links">
+                <div class="footer-col">
+                    <h4>Navigate</h4>
+                    <a href="#collections">Collections</a>
+                    <a href="#events">Events</a>
+                    <a href="#about">About</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Connect</h4>
+                    <a href="#">Instagram</a>
+                    <a href="#">Twitter</a>
+                    <a href="#">TikTok</a>
+                    <a href="mailto:hello@studio18.co">Email</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Locations</h4>
+                    <p>Nairobi, Kenya</p>
+                    <p>Kigali, Rwanda</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2024 STUDIO 18. All rights reserved.</p>
+            <div class="footer-legal">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
