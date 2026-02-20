@@ -1,6 +1,8 @@
 /* ========================================
    STUDIO 18 - Premium Fashion Website
    Red Neon Aesthetic · Editorial · Immersive
+   ezzz type
+   smooth animations, scroll effects, and interactions
    ======================================== */
 
 /* CSS Variables */
@@ -348,6 +350,9 @@ img {
     line-height: 0.9;
     letter-spacing: -0.04em;
     margin-bottom: 1.5rem;
+}
+.hero-title {
+    white-space: nowrap;
 }
 
 .title-line {

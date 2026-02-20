@@ -1,6 +1,6 @@
 /**
  * STUDIO 18 - Premium Fashion Website
- * Smooth animations, scroll effects, and interactions
+ * Smooth animations, scroll effects, and interactions ezzz type
  */
 
 // Initialize Lenis smooth scroll
